@@ -1,0 +1,86 @@
+in c++ ->
+
+: is called scope resolution operator.
+
+Multiple inheritance:-
+
+A   B
+ \ /
+  c
+
+Multi level inheritance:-
+	A
+	|
+	B
+	|
+	c
+
+Hirarecle inheritance:-
+
+	C
+       / \
+      A   B
+
+Base class pointer can point to child class object but vice versa not allowed.
+i.e child class pointer cannot point to Base class object.
+
+Through Base class pointer we can only access properties of child object which are also properties of parent class.
+
+polymorphism compile time:-
+function overloading: - fun(a,v),fun(a),fun()
+operator overloading:- int a + int b,char a + char b,double a + double b
+function overiding:- decided in run time
+vehicle v parent has print()
+car c child has print()
+v.print() call print() of vehicle.
+c.print() call print() of car.
+
+*v1 pointer of vehicle type pointing to vehicle v 
+*v2 pointer of vehicle type pointing to car c. 
+
+v1->print will call print() of vehicle v.
+v2->print will also call print() of vehicle v.It will not check whom it is pointing to.Just call print of class vehicle of object c.
+
+Virtual funtions:- present in base class and overridden in the derived class
+
+polymorphism runtime:-
+*v1 pointer of vehicle type pointing to vehicle v 
+*v2 pointer of vehicle type pointing to car c. 
+
+print() is virtual function in parent class "vehicle" and overriden in child class "car".
+v2->print will call print of vehicle v but since print of vehicle v is virutal function in parent class(vehicle class) so it will check type of object v2 is pointing.
+v2 is pointing to car class type so it will call print of car c object.
+
+if print not present in the child class car c then complier will go to parent class(vehicle class) where print is defined as virtual and will print the 
+print() function of Vehicle v.
+
+if print() function not present in vehicle class then v2->print() will give error as we can only access properties of parent class since pointer is of type vehicle.
+
+Usecase:-
+org has diff emp like hr,manager,engineer,other
+all have different salary calculation.
+		Employees    -> virtual CalculateSalary()
+	       / /\ \
+	      / /  \ \
+             / /    \ \
+            / /      \ \
+           / /        \ \
+          / /          \ \
+         / /            \ \
+        / /              \ \
+       HR Manager   engineer others
+       (1) (3)        (20)     (4)
+	All have CalculateSalary() function
+	Employee **e=new Employee*[28]
+	e[i]->CalculateSalary()will call CalculateSalary() function from HR,Manager,engineer,others class based on the type of object e[i] is pointing to.
+	Advantage ->On only one traversal we can calculate salary of all employees.
+	 _ _ _ _ _ _ _ _              _
+	|_|_|_|_|_|_|_|_|............|_|
+         | | | | | | | |              |
+        HR Manager engineer        others
+
+Pure Virtual functions - which have no defintion.
+ex:- virtual void print()=0;
+
+Any class which contains any pure virtual functions becomes an abstract class
+	

@@ -12,7 +12,7 @@ The repository name keeps the original spelling, `Competetive_programming`, but 
 
 - 241 C++ source files
 - 216 files with a `main()` function
-- 29 topic folders under `coding_ninja/`
+- 29 topic folders at the repository root
 - Core language: C++
 - Main style: standalone online-judge submissions and course exercise files
 - Also includes a few compiled artifacts (`.out`, `.exe`) and course notes
@@ -41,36 +41,35 @@ flowchart LR
 
 ```text
 .
-`-- coding_ninja/
-    |-- 8. opps1/
-    |-- 9.opps2/
-    |-- 25.oops3/
-    |-- 25.oops3-2/
-    |-- advance_recursion/
-    |-- backtracking/
-    |-- Assignment-Backtracking,Binary Search_And_Merge_Sort_Problems/
-    |-- sorting_applications/
-    |-- adhoc_problem/
-    |-- DP/
-    |-- DP-2/
-    |-- Dp&Bitmasking/
-    |-- dp&_bit_masking/
-    |-- Graphs/
-    |-- Graph2/
-    |-- advance_graphs/
-    |-- BST/
-    |-- Segment_tree/
-    |-- fenwick_trees/
-    |-- Bit_Manipulation/
-    |-- number_theory_1/
-    |-- number_theory_2/
-    |-- number_theory_3/
-    |-- application_of_number_theory_1/
-    |-- Game_theory/
-    |-- greedy/
-    |-- Codezen/
-    |-- Computation_Geometry/
-    `-- FFT/
+|-- 8. opps1/
+|-- 9.opps2/
+|-- 25.oops3/
+|-- 25.oops3-2/
+|-- advance_recursion/
+|-- backtracking/
+|-- Assignment-Backtracking,Binary Search_And_Merge_Sort_Problems/
+|-- sorting_applications/
+|-- adhoc_problem/
+|-- DP/
+|-- DP-2/
+|-- Dp&Bitmasking/
+|-- dp&_bit_masking/
+|-- Graphs/
+|-- Graph2/
+|-- advance_graphs/
+|-- BST/
+|-- Segment_tree/
+|-- fenwick_trees/
+|-- Bit_Manipulation/
+|-- number_theory_1/
+|-- number_theory_2/
+|-- number_theory_3/
+|-- application_of_number_theory_1/
+|-- Game_theory/
+|-- greedy/
+|-- Codezen/
+|-- Computation_Geometry/
+`-- FFT/
 ```
 
 ## Topic Guide
@@ -277,21 +276,21 @@ cd Competetive_programming
 Browse by topic:
 
 ```bash
-cd coding_ninja/DP-2
+cd DP-2
 ls
 ```
 
 Compile a standalone solution:
 
 ```bash
-g++ -std=gnu++14 -O2 "coding_ninja/advance_recursion/Merge_Sort_Code.cpp" -o /tmp/merge_sort
+g++ -std=gnu++14 -O2 "advance_recursion/Merge_Sort_Code.cpp" -o /tmp/merge_sort
 /tmp/merge_sort
 ```
 
 For file names with spaces, keep the path in quotes:
 
 ```bash
-g++ -std=gnu++14 -O2 "coding_ninja/sorting_applications/Aggressive Cows Problem.cpp" -o /tmp/aggressive_cows
+g++ -std=gnu++14 -O2 "sorting_applications/Aggressive Cows Problem.cpp" -o /tmp/aggressive_cows
 ```
 
 ## Build Notes
